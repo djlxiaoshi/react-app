@@ -71,7 +71,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix --ignore-path .eslintignore .",
-    "style-lint": "stylelint src/App.css"
+    "style-lint": "stylelint src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -161,7 +161,9 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint"
-    ]
+      "eslint --fix"
+    ],
+    "src/**/*.css": "stylelint --fix",
+    "src/**/*.scss": "stylelint --syntax=scss --fix"
   }
 }
