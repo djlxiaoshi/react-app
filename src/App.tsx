@@ -6,7 +6,6 @@ import './App.css';
 
 function App() {
     const a = 'lix';
-    console.log(qqq);
     return (
         <div className="App">
             <header className="App-header">
